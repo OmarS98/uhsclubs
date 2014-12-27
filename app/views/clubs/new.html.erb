@@ -1,0 +1,11 @@
+<h1>Create a Club</h1>
+<%= form_for(@club) do |c| %> 
+<p><%= c.text_field :name , placeholder: 'Club Name'%></p>
+<p><%= c.text_field :place , placeholder: 'Place' %></p>
+<p><%= c.time_select  :hour , placeholder: 'Time' %></p>
+<p><%= c.submit 'Submit' %></p>
+<% end %>
+
+
+
+

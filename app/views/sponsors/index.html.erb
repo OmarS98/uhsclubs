@@ -1,0 +1,8 @@
+<h1>Sponsors Index</h1>
+<%= link_to 'Add sponsor' , new_sponsor_path %>
+<p>All the sponsors</p>
+<% @sponsors.each do |s| %>
+<p><%= s.id %>
+<%= s.name %> 
+<%= link_to 'Sponsor URL', s.url %> </p>
+<% end %>

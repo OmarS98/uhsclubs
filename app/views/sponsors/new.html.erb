@@ -1,0 +1,7 @@
+<h1>Add Sponsor </h1>
+	<%= form_for (@sponsor) do |s| %>
+	<p> <%= s.text_field :name , placeholder: 'Sponsors name' %> </p>
+	<p><%= s.text_field :url, placeholder: 'Url' %></p>
+	<p><%= s.submit 'Add' %></p>
+<% end %>
+<%= link_to 'Back', sponsors_path %>

@@ -1,0 +1,16 @@
+<%= link_to 'about', about_path %>
+<%= link_to 'contact', contact_path %>
+<%= link_to 'help', help_path %>
+<% if user_signed_in? %>
+	<%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+	<% else %> 
+	<%= link_to 'Log  In', new_user_session_path %>
+<% end %>
+
+<h1>Welcome to UHS Clubs</h1>
+<p>In this page you will find informationa bout Untied High Shchool clubs</p>
+<% if user_signed_in? %>
+	<%= link_to 'Post a Club', new_club_path %>
+	<% else %> 
+	<%= link_to 'join now!', new_user_registration_path %>
+<% end %>
